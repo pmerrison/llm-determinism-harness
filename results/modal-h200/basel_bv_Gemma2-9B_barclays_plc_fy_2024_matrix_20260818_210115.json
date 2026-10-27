@@ -1,0 +1,372 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Gemma2-9B",
+      "model_id": "google/gemma-2-9b-it",
+      "arch": "dense",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "barclays_plc_fy_2024.pdf",
+      "filler_docs": [
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q3_2024.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "2": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "4": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "8": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "16": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.71
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.72
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.69
+          }
+        ],
+        "2": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.85
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.75
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.77
+          }
+        ],
+        "4": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.99
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.97
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 3.99
+          }
+        ],
+        "8": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.57
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.54
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.55
+          }
+        ],
+        "16": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.37
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.34
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.31
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 48600,
+              "currency": "\u00a3m"
+            },
+            "cet1_ratio": 13.6,
+            "total_capital_ratio": null,
+            "rwa": {
+              "amount": 358100,
+              "currency": "\u00a3m"
+            },
+            "leverage_ratio": 5.0,
+            "lcr": 172.4
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 13.6,
+              "gt": 13.6,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": null,
+              "gt": 19.6,
+              "match": false
+            },
+            "leverage_ratio": {
+              "value": 5.0,
+              "gt": 5.0,
+              "match": true
+            },
+            "lcr": {
+              "value": 172.4,
+              "gt": 172.4,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 48600.0,
+              "gt": 48558.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 358100.0,
+              "gt": 358127.0,
+              "match": false
+            }
+          },
+          "text_head": "\n{\n  \"cet1_capital\": {\"amount\": 48600, \"currency\": \"\u00a3m\"},\n  \"cet1_ratio\": 13.6,\n  \"total_capital_ratio\": null,\n  \"rwa\": {\"amount\": 358100, \"currency\": \"\u00a3m\"},\n  \"leverage_ratio\": 5.0,\n  \"lcr\": 172.4\n}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 48558,
+          "currency": "GBP"
+        },
+        "cet1_ratio": 13.6,
+        "total_capital_ratio": 19.6,
+        "rwa": {
+          "amount": 358127,
+          "currency": "GBP"
+        },
+        "leverage_ratio": 5.0,
+        "lcr": 172.4
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T19:59:17.047340"
+    },
+    "ON": {
+      "model": "Gemma2-9B",
+      "model_id": "google/gemma-2-9b-it",
+      "arch": "dense",
+      "batch_invariant": true,
+      "mode": "ON",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "barclays_plc_fy_2024.pdf",
+      "filler_docs": [
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q3_2024.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "2": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "4": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "8": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+        "16": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.96
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.93
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 4.93
+          }
+        ],
+        "2": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.54
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.07
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.01
+          }
+        ],
+        "4": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.34
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.31
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 5.3
+          }
+        ],
+        "8": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 6.05
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 6.06
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 6.08
+          }
+        ],
+        "16": [
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 6.98
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 7.03
+          },
+          {
+            "hash": "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160",
+            "batch_latency_s": 6.98
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "b849f86dc4977a4149dfb5999aea85758b60d0ef833b0c07f3383a2bef225160": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 48600,
+              "currency": "\u00a3m"
+            },
+            "cet1_ratio": 13.6,
+            "total_capital_ratio": null,
+            "rwa": {
+              "amount": 358100,
+              "currency": "\u00a3m"
+            },
+            "leverage_ratio": 5.0,
+            "lcr": 172.4
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 13.6,
+              "gt": 13.6,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": null,
+              "gt": 19.6,
+              "match": false
+            },
+            "leverage_ratio": {
+              "value": 5.0,
+              "gt": 5.0,
+              "match": true
+            },
+            "lcr": {
+              "value": 172.4,
+              "gt": 172.4,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 48600.0,
+              "gt": 48558.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 358100.0,
+              "gt": 358127.0,
+              "match": false
+            }
+          },
+          "text_head": "\n{\n  \"cet1_capital\": {\"amount\": 48600, \"currency\": \"\u00a3m\"},\n  \"cet1_ratio\": 13.6,\n  \"total_capital_ratio\": null,\n  \"rwa\": {\"amount\": 358100, \"currency\": \"\u00a3m\"},\n  \"leverage_ratio\": 5.0,\n  \"lcr\": 172.4\n}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 48558,
+          "currency": "GBP"
+        },
+        "cet1_ratio": 13.6,
+        "total_capital_ratio": 19.6,
+        "rwa": {
+          "amount": 358127,
+          "currency": "GBP"
+        },
+        "leverage_ratio": 5.0,
+        "lcr": 172.4
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T20:01:13.122049"
+    }
+  }
+}

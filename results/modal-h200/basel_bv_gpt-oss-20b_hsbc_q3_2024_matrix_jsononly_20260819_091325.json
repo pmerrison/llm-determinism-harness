@@ -1,0 +1,393 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "gpt-oss-20b",
+      "model_id": "openai/gpt-oss-20b",
+      "arch": "MoE",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 2560,
+      "json_only": true,
+      "chat_template": true,
+      "tensor_parallel_size": 1,
+      "unique_target_outputs_across_sizes": 5,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "6363f7b08de21cce9328340de86cbfc807ebd6d907d72f176be9dca1115e9e0d",
+        "2": "0d6089ef18c727fa3449e4e934f706c8d81dbccf20ea2456720b30f4fe8a16e6",
+        "4": "021fbe2de2fddc74b76183fdb4bc2a3511b877ec3b62bc84b3548e276e3e6d9c",
+        "8": "74a57d71498e99b997b22daf7b10ea50feb7acfb132a5a48dc78bbaf120fd101",
+        "16": "a0ad3f548cea35046787aa235e0bc484f2e523dd9a6dbf84a965d8a4c929cd81"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "6363f7b08de21cce9328340de86cbfc807ebd6d907d72f176be9dca1115e9e0d",
+            "batch_latency_s": 50.33
+          },
+          {
+            "hash": "6363f7b08de21cce9328340de86cbfc807ebd6d907d72f176be9dca1115e9e0d",
+            "batch_latency_s": 40.39
+          },
+          {
+            "hash": "6363f7b08de21cce9328340de86cbfc807ebd6d907d72f176be9dca1115e9e0d",
+            "batch_latency_s": 39.75
+          }
+        ],
+        "2": [
+          {
+            "hash": "0d6089ef18c727fa3449e4e934f706c8d81dbccf20ea2456720b30f4fe8a16e6",
+            "batch_latency_s": 37.19
+          },
+          {
+            "hash": "0d6089ef18c727fa3449e4e934f706c8d81dbccf20ea2456720b30f4fe8a16e6",
+            "batch_latency_s": 35.29
+          },
+          {
+            "hash": "0d6089ef18c727fa3449e4e934f706c8d81dbccf20ea2456720b30f4fe8a16e6",
+            "batch_latency_s": 35.05
+          }
+        ],
+        "4": [
+          {
+            "hash": "021fbe2de2fddc74b76183fdb4bc2a3511b877ec3b62bc84b3548e276e3e6d9c",
+            "batch_latency_s": 94.06
+          },
+          {
+            "hash": "021fbe2de2fddc74b76183fdb4bc2a3511b877ec3b62bc84b3548e276e3e6d9c",
+            "batch_latency_s": 92.02
+          },
+          {
+            "hash": "021fbe2de2fddc74b76183fdb4bc2a3511b877ec3b62bc84b3548e276e3e6d9c",
+            "batch_latency_s": 91.18
+          }
+        ],
+        "8": [
+          {
+            "hash": "74a57d71498e99b997b22daf7b10ea50feb7acfb132a5a48dc78bbaf120fd101",
+            "batch_latency_s": 194.46
+          },
+          {
+            "hash": "74a57d71498e99b997b22daf7b10ea50feb7acfb132a5a48dc78bbaf120fd101",
+            "batch_latency_s": 191.3
+          },
+          {
+            "hash": "74a57d71498e99b997b22daf7b10ea50feb7acfb132a5a48dc78bbaf120fd101",
+            "batch_latency_s": 190.74
+          }
+        ],
+        "16": [
+          {
+            "hash": "a0ad3f548cea35046787aa235e0bc484f2e523dd9a6dbf84a965d8a4c929cd81",
+            "batch_latency_s": 127.68
+          },
+          {
+            "hash": "a0ad3f548cea35046787aa235e0bc484f2e523dd9a6dbf84a965d8a4c929cd81",
+            "batch_latency_s": 123.94
+          },
+          {
+            "hash": "a0ad3f548cea35046787aa235e0bc484f2e523dd9a6dbf84a965d8a4c929cd81",
+            "batch_latency_s": 125.01
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "6363f7b08de21cce9328340de86cbfc807ebd6d907d72f176be9dca1115e9e0d": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure. We need the most recent figures (latest reporting date). The latest date is 30 Sep 2024. Use transitional figures if both transitional and fully-loaded are shown. The table shows transitional figures. For CET1 capital, the amount is 131.4bn (in $bn). We need to convert to millions: 131.4bn = 131,400 million. Currency: USD. CET1 ratio: 15.2%. Total capital ratio: 20.8%. RWA: 863.9bn = 863,900 millio"
+        },
+        "0d6089ef18c727fa3449e4e934f706c8d81dbccf20ea2456720b30f4fe8a16e6": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure. We need the most recent figures (latest reporting date). The latest date is 30 Sep 2024. Use transitional figures if both transitional and fully-loaded are shown. The table shows transitional figures. For CET1 capital, the amount is 131.4bn (in $bn). We need to convert to millions: 131.4bn = 131,400 million. Currency: USD? The document uses $bn, which is US dollars. So currency is USD.\n\nCET1 Ratio:"
+        },
+        "021fbe2de2fddc74b76183fdb4bc2a3511b877ec3b62bc84b3548e276e3e6d9c": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure. We need the most recent figures (latest reporting date). The latest date is 30 Sep 2024. Use transitional figures if both transitional and fully-loaded are shown. The table shows transitional figures. For CET1 capital, the amount is 131.4bn (in $bn). We need to convert to millions: 131.4bn = 131,400 million. Currency: USD. CET1 ratio: 15.2%. Total capital ratio: 20.8%. RWA: 863.9bn = 863,900 millio"
+        },
+        "74a57d71498e99b997b22daf7b10ea50feb7acfb132a5a48dc78bbaf120fd101": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure. We need the most recent figures (latest reporting date). The latest date is 30 Sep 2024. Use transitional figures if both transitional and fully-loaded are shown. The metrics:\n\n1. CET1 Capital (Common Equity Tier 1) - absolute amount in millions\n2. CET1 Ratio (%) - percentage ratio\n3. Total Capital Ratio (%) - percentage ratio\n4. Total RWA (Risk-Weighted Assets) - absolute amount in millions\n5. Lev"
+        },
+        "a0ad3f548cea35046787aa235e0bc484f2e523dd9a6dbf84a965d8a4c929cd81": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure. We need the most recent figures (latest reporting date). The latest date is 30 Sep 2024. Use transitional figures if both transitional and fully-loaded are shown. The table shows transitional figures. For CET1 capital, the amount is 131.4bn (in $bn). We need to convert to millions: 131.4bn = 131,400 million. Currency: USD. CET1 ratio: 15.2%. Total capital ratio: 20.8%. RWA: 863.9bn = 863,900 millio"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-19T08:13:12.400273"
+    },
+    "ON": {
+      "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+    }
+  }
+}

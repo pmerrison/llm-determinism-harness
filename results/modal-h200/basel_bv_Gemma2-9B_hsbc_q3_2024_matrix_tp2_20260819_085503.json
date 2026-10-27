@@ -1,0 +1,376 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Gemma2-9B",
+      "model_id": "google/gemma-2-9b-it",
+      "arch": "dense",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "chat_template": false,
+      "tensor_parallel_size": 2,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "2": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "4": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "8": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "16": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 6.73
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.7
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.04
+          }
+        ],
+        "2": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.44
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 4.84
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.05
+          }
+        ],
+        "4": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.1
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.44
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.1
+          }
+        ],
+        "8": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.84
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.64
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 5.55
+          }
+        ],
+        "16": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 6.15
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 6.03
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 6.22
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428000000,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900000000,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428000000.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900000000.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n{\n  \"cet1_capital\": {\"amount\": 131428000000, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900000000, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-19T07:51:44.808627"
+    },
+    "ON": {
+      "model": "Gemma2-9B",
+      "model_id": "google/gemma-2-9b-it",
+      "arch": "dense",
+      "batch_invariant": true,
+      "mode": "ON",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "chat_template": false,
+      "tensor_parallel_size": 2,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "2": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "4": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "8": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+        "16": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 8.74
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.29
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.47
+          }
+        ],
+        "2": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.42
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.27
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.56
+          }
+        ],
+        "4": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.47
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.38
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 7.82
+          }
+        ],
+        "8": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 8.71
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 8.26
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 8.2
+          }
+        ],
+        "16": [
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 9.44
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 9.81
+          },
+          {
+            "hash": "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f",
+            "batch_latency_s": 9.64
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "d513cc2958360cba49187206256e5eafcd16e435fa539da9300b1e8324867d8f": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428000000,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900000000,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428000000.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900000000.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n{\n  \"cet1_capital\": {\"amount\": 131428000000, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900000000, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-19T07:54:57.554144"
+    }
+  }
+}

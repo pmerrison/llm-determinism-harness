@@ -1,0 +1,171 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Qwen3.5-27B",
+      "model_id": "Qwen/Qwen3.5-27B",
+      "arch": "gated-linear-attn",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 5,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "4450b013f77753149209b07537b58c577331479a3e2d896d880b024449388f5b",
+        "2": "c5c9273c51d9e09d22017b0fd0d058e1aa4d460e7b772377b831b00fd894394e",
+        "4": "c33283505256247cb3a143f4758d069999dd3b88b5e0c817a8569d27f6cdc32c",
+        "8": "be50364d1cc1d0efe7496f9b4a9757f03c8613553dd7966ad40cbc2afcc3a094",
+        "16": "1cf98dc5b02ebec5a88ff0aff8a9face8b411c0e9b1fbfbc8770044e53324e8f"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "4450b013f77753149209b07537b58c577331479a3e2d896d880b024449388f5b",
+            "batch_latency_s": 66.1
+          },
+          {
+            "hash": "4450b013f77753149209b07537b58c577331479a3e2d896d880b024449388f5b",
+            "batch_latency_s": 57.44
+          },
+          {
+            "hash": "4450b013f77753149209b07537b58c577331479a3e2d896d880b024449388f5b",
+            "batch_latency_s": 57.23
+          }
+        ],
+        "2": [
+          {
+            "hash": "c5c9273c51d9e09d22017b0fd0d058e1aa4d460e7b772377b831b00fd894394e",
+            "batch_latency_s": 60.36
+          },
+          {
+            "hash": "c5c9273c51d9e09d22017b0fd0d058e1aa4d460e7b772377b831b00fd894394e",
+            "batch_latency_s": 59.12
+          },
+          {
+            "hash": "c5c9273c51d9e09d22017b0fd0d058e1aa4d460e7b772377b831b00fd894394e",
+            "batch_latency_s": 58.26
+          }
+        ],
+        "4": [
+          {
+            "hash": "c33283505256247cb3a143f4758d069999dd3b88b5e0c817a8569d27f6cdc32c",
+            "batch_latency_s": 61.17
+          },
+          {
+            "hash": "c33283505256247cb3a143f4758d069999dd3b88b5e0c817a8569d27f6cdc32c",
+            "batch_latency_s": 62.95
+          },
+          {
+            "hash": "c33283505256247cb3a143f4758d069999dd3b88b5e0c817a8569d27f6cdc32c",
+            "batch_latency_s": 59.89
+          }
+        ],
+        "8": [
+          {
+            "hash": "be50364d1cc1d0efe7496f9b4a9757f03c8613553dd7966ad40cbc2afcc3a094",
+            "batch_latency_s": 61.64
+          },
+          {
+            "hash": "be50364d1cc1d0efe7496f9b4a9757f03c8613553dd7966ad40cbc2afcc3a094",
+            "batch_latency_s": 64.88
+          },
+          {
+            "hash": "be50364d1cc1d0efe7496f9b4a9757f03c8613553dd7966ad40cbc2afcc3a094",
+            "batch_latency_s": 65.64
+          }
+        ],
+        "16": [
+          {
+            "hash": "1cf98dc5b02ebec5a88ff0aff8a9face8b411c0e9b1fbfbc8770044e53324e8f",
+            "batch_latency_s": 69.19
+          },
+          {
+            "hash": "1cf98dc5b02ebec5a88ff0aff8a9face8b411c0e9b1fbfbc8770044e53324e8f",
+            "batch_latency_s": 64.52
+          },
+          {
+            "hash": "1cf98dc5b02ebec5a88ff0aff8a9face8b411c0e9b1fbfbc8770044e53324e8f",
+            "batch_latency_s": 63.57
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "4450b013f77753149209b07537b58c577331479a3e2d896d880b024449388f5b": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital (Common Equity Tier 1)** - absolute amount in millions.\n2.  **CET1 Ratio (%)** - percentage ratio.\n3.  **Total Capital Ratio (%)** - percentage ratio.\n4.  **Total RWA (Risk-Weighted Assets)** - absolute amount in millions.\n5.  **Leverage Ratio (%)** - also known as SLR.\n6.  **LCR (%)** - Liquidity Coverage Ra"
+        },
+        "c5c9273c51d9e09d22017b0fd0d058e1aa4d460e7b772377b831b00fd894394e": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (latest reporting date) which is 30 September 2024 based on the document title \"Pillar 3 Disclosures at 30 September 2024\".\nI need to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nI need to check for transitional vs fully-loaded figures. The inst"
+        },
+        "c33283505256247cb3a143f4758d069999dd3b88b5e0c817a8569d27f6cdc32c": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (latest reporting date) which is 30 September 2024 based on the document title \"Pillar 3 Disclosures at 30 September 2024\".\nI need to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nI need to check for transitional vs fully-loaded figures. The inst"
+        },
+        "be50364d1cc1d0efe7496f9b4a9757f03c8613553dd7966ad40cbc2afcc3a094": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (30 September 2024) and use transitional figures if available.\nThe output must be valid JSON in a specific format.\n\nMetrics to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nDocument Analysis:\n- The document is \"HSBC Holdings plc Pillar 3 Disclosu"
+        },
+        "1cf98dc5b02ebec5a88ff0aff8a9face8b411c0e9b1fbfbc8770044e53324e8f": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\nThe document is \"Pillar 3 Disclosures at 30 September 2024\".\n\nI need to extract the following 6 metrics:\n1. CET1 Capital (Common Equity Tier 1) - absolute amount in millions\n2. CET1 Ratio (%) - percentage ratio\n3. Total Capital Ratio (%) - percentage ratio\n4. Total RWA (Risk-Weighted Assets) - absolute amount in millions\n5. Leverage Ratio (%) - also kn"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T20:58:24.778892"
+    },
+    "ON": {
+      "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+    }
+  }
+}

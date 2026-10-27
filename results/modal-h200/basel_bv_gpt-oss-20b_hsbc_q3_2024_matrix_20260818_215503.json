@@ -1,0 +1,171 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "gpt-oss-20b",
+      "model_id": "openai/gpt-oss-20b",
+      "arch": "MoE",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 5,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "5395e421bf41847c3687db348f001aa27583f6ec8069839364981f06ddb9538e",
+        "2": "3094a6f062d37b482232ba2acaf0a98e60c5c0ee388b8b5042c357d9435966d9",
+        "4": "b280904f04885f68ef6b291b5a97f606549a9ec1ccd4a803e61fd8cf58aa39ea",
+        "8": "ef4d7785519d4cbd5a676d9f7922b5a551e23396f79d91dc42aed90f1546f454",
+        "16": "3077e12bea27e1649375eba41293eefa28b5c250bd45dbec949e2a62d72ff6c1"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "5395e421bf41847c3687db348f001aa27583f6ec8069839364981f06ddb9538e",
+            "batch_latency_s": 105.9
+          },
+          {
+            "hash": "5395e421bf41847c3687db348f001aa27583f6ec8069839364981f06ddb9538e",
+            "batch_latency_s": 97.22
+          },
+          {
+            "hash": "5395e421bf41847c3687db348f001aa27583f6ec8069839364981f06ddb9538e",
+            "batch_latency_s": 97.4
+          }
+        ],
+        "2": [
+          {
+            "hash": "3094a6f062d37b482232ba2acaf0a98e60c5c0ee388b8b5042c357d9435966d9",
+            "batch_latency_s": 100.98
+          },
+          {
+            "hash": "3094a6f062d37b482232ba2acaf0a98e60c5c0ee388b8b5042c357d9435966d9",
+            "batch_latency_s": 96.79
+          },
+          {
+            "hash": "3094a6f062d37b482232ba2acaf0a98e60c5c0ee388b8b5042c357d9435966d9",
+            "batch_latency_s": 97.18
+          }
+        ],
+        "4": [
+          {
+            "hash": "b280904f04885f68ef6b291b5a97f606549a9ec1ccd4a803e61fd8cf58aa39ea",
+            "batch_latency_s": 100.9
+          },
+          {
+            "hash": "b280904f04885f68ef6b291b5a97f606549a9ec1ccd4a803e61fd8cf58aa39ea",
+            "batch_latency_s": 97.77
+          },
+          {
+            "hash": "b280904f04885f68ef6b291b5a97f606549a9ec1ccd4a803e61fd8cf58aa39ea",
+            "batch_latency_s": 97.56
+          }
+        ],
+        "8": [
+          {
+            "hash": "ef4d7785519d4cbd5a676d9f7922b5a551e23396f79d91dc42aed90f1546f454",
+            "batch_latency_s": 98.59
+          },
+          {
+            "hash": "ef4d7785519d4cbd5a676d9f7922b5a551e23396f79d91dc42aed90f1546f454",
+            "batch_latency_s": 97.83
+          },
+          {
+            "hash": "ef4d7785519d4cbd5a676d9f7922b5a551e23396f79d91dc42aed90f1546f454",
+            "batch_latency_s": 98.23
+          }
+        ],
+        "16": [
+          {
+            "hash": "3077e12bea27e1649375eba41293eefa28b5c250bd45dbec949e2a62d72ff6c1",
+            "batch_latency_s": 101.92
+          },
+          {
+            "hash": "3077e12bea27e1649375eba41293eefa28b5c250bd45dbec949e2a62d72ff6c1",
+            "batch_latency_s": 98.25
+          },
+          {
+            "hash": "3077e12bea27e1649375eba41293eefa28b5c250bd45dbec949e2a62d72ff6c1",
+            "batch_latency_s": 100.01
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "5395e421bf41847c3687db348f001aa27583f6ec8069839364981f06ddb9538e": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": " ...\"\n\nWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure for HSBC Holdings plc at 30 September 2024. We need to extract the most recent figures (latest reporting date). Use transitional figures if both transitional and fully-loaded are shown. Report amounts in millions. If metric not found, use null.\n\nWe need to output JSON with keys:\n\n{\n  \"cet1_capital\": {\"amount\": <number>, \"currency\": \"<USD/GBP/EUR>\"},\n  \"cet1_ratio\": <number>,\n  \"total_capital_ratio\": "
+        },
+        "3094a6f062d37b482232ba2acaf0a98e60c5c0ee388b8b5042c357d9435966d9": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": " ...\"\n\nWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure for HSBC Holdings plc at 30 September 2024. We need to extract the most recent figures (latest reporting date in the document). Use transitional figures if both transitional and fully-loaded are shown. Report amounts in millions. If metric not found, use null.\n\nWe need to output JSON with keys:\n\n{\n  \"cet1_capital\": {\"amount\": <number>, \"currency\": \"<USD/GBP/EUR>\"},\n  \"cet1_ratio\": <number>,\n  \"total_"
+        },
+        "b280904f04885f68ef6b291b5a97f606549a9ec1ccd4a803e61fd8cf58aa39ea": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": " ...\"\n\nWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure for HSBC Holdings plc at 30 September 2024. We need to extract the most recent figures (latest reporting date in the document). Use transitional figures if both transitional and fully-loaded are shown. Report amounts in millions. If a metric is not found, use null.\n\nWe need to output JSON with keys:\n\n{\n  \"cet1_capital\": {\"amount\": <number>, \"currency\": \"<USD/GBP/EUR>\"},\n  \"cet1_ratio\": <number>,\n  \"t"
+        },
+        "ef4d7785519d4cbd5a676d9f7922b5a551e23396f79d91dc42aed90f1546f454": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": " ...\"\n\nWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure for HSBC Holdings plc at 30 September 2024. We need to extract the most recent figures (latest reporting date in the document). Use transitional figures if both transitional and fully-loaded are shown. Report amounts in millions. If a metric is not found, use null.\n\nWe need to output JSON with keys:\n\n{\n  \"cet1_capital\": {\"amount\": <number>, \"currency\": \"<USD/GBP/EUR>\"},\n  \"cet1_ratio\": <number>,\n  \"t"
+        },
+        "3077e12bea27e1649375eba41293eefa28b5c250bd45dbec949e2a62d72ff6c1": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": " ...\"\n\nWe need to extract the 6 metrics from the document. The document is a Pillar 3 disclosure for HSBC Holdings plc at 30 September 2024. We need to extract the most recent figures (latest reporting date). Use transitional figures if both transitional and fully-loaded are shown. Report amounts in millions. If metric not found, use null.\n\nWe need to output JSON with keys:\n\n{\n  \"cet1_capital\": {\"amount\": <number>, \"currency\": \"<USD/GBP/EUR>\"},\n  \"cet1_ratio\": <number>,\n  \"total_capital_ratio\": "
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T20:54:53.135081"
+    },
+    "ON": {
+      "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+    }
+  }
+}

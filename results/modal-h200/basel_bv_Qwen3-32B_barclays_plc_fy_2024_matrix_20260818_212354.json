@@ -1,0 +1,372 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "barclays_plc_fy_2024.pdf",
+      "filler_docs": [
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q3_2024.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+        "2": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+        "4": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+        "8": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+        "16": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.61
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.1
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.0
+          }
+        ],
+        "2": [
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.21
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.44
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.15
+          }
+        ],
+        "4": [
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.71
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.8
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 25.77
+          }
+        ],
+        "8": [
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 27.1
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 27.05
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 27.11
+          }
+        ],
+        "16": [
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 29.66
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 29.39
+          },
+          {
+            "hash": "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5",
+            "batch_latency_s": 29.57
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "aa1a6a3e1d36acac7e31261ada52a8679efb2b6abf5cc203fc1bb72af60a61f5": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 48600,
+              "currency": "GBP"
+            },
+            "cet1_ratio": 13.6,
+            "total_capital_ratio": null,
+            "rwa": {
+              "amount": 358100,
+              "currency": "GBP"
+            },
+            "leverage_ratio": 5.0,
+            "lcr": 172
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 13.6,
+              "gt": 13.6,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": null,
+              "gt": 19.6,
+              "match": false
+            },
+            "leverage_ratio": {
+              "value": 5.0,
+              "gt": 5.0,
+              "match": true
+            },
+            "lcr": {
+              "value": 172.0,
+              "gt": 172.4,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 48600.0,
+              "gt": 48558.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 358100.0,
+              "gt": 358127.0,
+              "match": false
+            }
+          },
+          "text_head": " Based on the document provided, here is the extracted data in the requested format:\n\n{\n  \"cet1_capital\": {\"amount\": 48600, \"currency\": \"GBP\"},\n  \"cet1_ratio\": 13.6,\n  \"total_capital_ratio\": null,\n  \"rwa\": {\"amount\": 358100, \"currency\": \"GBP\"},\n  \"leverage_ratio\": 5.0,\n  \"lcr\": 172\n} Based on the document provided, here is the extracted data in the requested format:\n\n{\n  \"cet1_capital\": {\"amount\": 48600, \"currency\": \"GBP\"},\n  \"cet1_ratio\": 13.6,\n  \"total_capital_ratio\": null,\n  \"rwa\": {\"amount\":"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 48558,
+          "currency": "GBP"
+        },
+        "cet1_ratio": 13.6,
+        "total_capital_ratio": 19.6,
+        "rwa": {
+          "amount": 358127,
+          "currency": "GBP"
+        },
+        "leverage_ratio": 5.0,
+        "lcr": 172.4
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T20:06:56.369833"
+    },
+    "ON": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": true,
+      "mode": "ON",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "barclays_plc_fy_2024.pdf",
+      "filler_docs": [
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q3_2024.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+        "2": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+        "4": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+        "8": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+        "16": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 45.62
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 43.86
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 43.86
+          }
+        ],
+        "2": [
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.03
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.1
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.03
+          }
+        ],
+        "4": [
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 65.99
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 65.98
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 65.97
+          }
+        ],
+        "8": [
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.64
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.65
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 66.66
+          }
+        ],
+        "16": [
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 69.29
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 69.31
+          },
+          {
+            "hash": "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e",
+            "batch_latency_s": 69.33
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "282f3e78c9a4777b28270e6773c6eca83a84809eff92f2bfcef928c5d890495e": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 48600,
+              "currency": "GBP"
+            },
+            "cet1_ratio": 13.6,
+            "total_capital_ratio": null,
+            "rwa": {
+              "amount": 358100,
+              "currency": "GBP"
+            },
+            "leverage_ratio": 5.0,
+            "lcr": 172
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 13.6,
+              "gt": 13.6,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": null,
+              "gt": 19.6,
+              "match": false
+            },
+            "leverage_ratio": {
+              "value": 5.0,
+              "gt": 5.0,
+              "match": true
+            },
+            "lcr": {
+              "value": 172.0,
+              "gt": 172.4,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 48600.0,
+              "gt": 48558.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 358100.0,
+              "gt": 358127.0,
+              "match": false
+            }
+          },
+          "text_head": " To be filled by the assistant\nOkay, let's tackle this. The user wants me to extract specific Basel III metrics from the provided document. First, I need to go through each page carefully.\n\nStarting with the metrics needed: CET1 Capital, CET1 Ratio, Total Capital Ratio, Total RWA, Leverage Ratio, and LCR. The most recent figures are required, and if transitional and fully-loaded are present, use transitional. Also, amounts should be in millions, and if a metric isn't found, use null.\n\nLooking at"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 48558,
+          "currency": "GBP"
+        },
+        "cet1_ratio": 13.6,
+        "total_capital_ratio": 19.6,
+        "rwa": {
+          "amount": 358127,
+          "currency": "GBP"
+        },
+        "leverage_ratio": 5.0,
+        "lcr": 172.4
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T20:23:51.487718"
+    }
+  }
+}

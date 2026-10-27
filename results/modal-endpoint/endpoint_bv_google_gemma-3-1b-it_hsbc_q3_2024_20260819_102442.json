@@ -1,0 +1,136 @@
+{
+  "method": "client-side concurrent traffic against served endpoint (no batch pinning)",
+  "engine": "Modal Auto Endpoint (SGLang, tuned, speculative decoding)",
+  "model": "google/gemma-3-1b-it",
+  "target_doc": "hsbc_q3_2024.pdf",
+  "concurrency": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "repeats": 3,
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "seed": 42,
+  "logprobs_check": {
+    "logprobs_supported": true,
+    "n_top_logprobs": 5,
+    "example_margin": 7.25
+  },
+  "margin_probe_via_endpoint": {
+    "n_steps": 110,
+    "min": 0.125,
+    "median": 15.625,
+    "frac<0.1": 0.0,
+    "frac<0.5": 0.0182,
+    "frac<1.0": 0.0273,
+    "frac<2.0": 0.0727
+  },
+  "unique_target_outputs": 3,
+  "unique_final_channel_outputs": 3,
+  "per_size": {
+    "1": [
+      {
+        "hash": "eb59623869a1ac8b5c818a52c599f047a49fb2ec8afc56b6cddc0e3cad759121",
+        "hash_final": "41d4cb12661714e0918a5ef73d9769783afb42fb8f813da9625f918e529b3a02",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 11.5,\n  \"total_capital_ratio\": 12.5,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "eb59623869a1ac8b5c818a52c599f047a49fb2ec8afc56b6cddc0e3cad759121",
+        "hash_final": "41d4cb12661714e0918a5ef73d9769783afb42fb8f813da9625f918e529b3a02",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 11.5,\n  \"total_capital_ratio\": 12.5,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "eb59623869a1ac8b5c818a52c599f047a49fb2ec8afc56b6cddc0e3cad759121",
+        "hash_final": "41d4cb12661714e0918a5ef73d9769783afb42fb8f813da9625f918e529b3a02",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 11.5,\n  \"total_capital_ratio\": 12.5,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      }
+    ],
+    "2": [
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      }
+    ],
+    "4": [
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "4da806b322effe4b36ca584a6ec4f4acde1728d89f9914d43cbfce305f7dbadd",
+        "hash_final": "537b3f78d8c76b8b432ec2ba790a4e4454e078016251feb3a2726e93978828bc",
+        "text_head": "```json\n{\n  \"cet1_capital\": {\n    \"amount\": 188.8,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 13.3,\n  \"total_capital_ratio\": 13.3,\n  \"rwa\": {\n    \"amount\": null,\n    \"currency\": null\n  },\n  \"leverage_ratio\": null,\n  \"lcr\": null\n}\n```",
+        "reasoning_head": ""
+      }
+    ],
+    "8": [
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      }
+    ],
+    "16": [
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      },
+      {
+        "hash": "5892719efa85017c6124144a1192a90d036d0a63127d574c7e34a2b6f18b8b46",
+        "hash_final": "55fc4ca1626f67c57861d64d582817dc0c4ed33d4071ca08c96497d38e0ef3c5",
+        "text_head": "```json\n{\n  \" disclosures\": [\n    \"Introduction\",\n    \"Highlights\",\n    \"Key metrics\",\n    \"Capital\",\n    \"Approach and policy\",\n    \"Key changes and regulatory assessments\",\n    \"Risk-weighted assets\",\n    \"Credit risk (including amounts below the thresholds for deduction)\",\n    \"Counterparty credit risk, including settlement risk\",\n    \"Securitisation\",\n    \"Market risk\",\n    \"Operational risk\",\n    \"Own funds disclosure\",\n    \"Overview of RWA (Millions)\",\n    \"RWAs by legal entities\",\n    \"RW",
+        "reasoning_head": ""
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T10:24:42.233673"
+}

@@ -1,0 +1,670 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "unique_target_outputs_across_sizes": 6,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "6a7149d070c54c7c4a5d06b2e2dda3d53dff699277f0e8ed7dc016be3876c06b",
+        "2": "c1c413c8b0bd6c9f0b19e14e9d2ac3f39ed3fc8ac0a65fbbcd0a86baebab4a87",
+        "4": "6a874ef79fef79faa3f4545d42e82ec4e48a984aa4812be292279385b9bae744",
+        "8": "e686c334a4dfbe6177182f41bfed351f1a9c11d3f2a5268bc3e5509eb2826335",
+        "16": "ec239dce7a29e176df7a36bf2026bcb8042be6ace75e22944b939e687f317cf6"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "6a7149d070c54c7c4a5d06b2e2dda3d53dff699277f0e8ed7dc016be3876c06b",
+            "batch_latency_s": 24.87
+          },
+          {
+            "hash": "6a7149d070c54c7c4a5d06b2e2dda3d53dff699277f0e8ed7dc016be3876c06b",
+            "batch_latency_s": 24.39
+          },
+          {
+            "hash": "6a7149d070c54c7c4a5d06b2e2dda3d53dff699277f0e8ed7dc016be3876c06b",
+            "batch_latency_s": 24.44
+          }
+        ],
+        "2": [
+          {
+            "hash": "c1c413c8b0bd6c9f0b19e14e9d2ac3f39ed3fc8ac0a65fbbcd0a86baebab4a87",
+            "batch_latency_s": 24.73
+          },
+          {
+            "hash": "c1c413c8b0bd6c9f0b19e14e9d2ac3f39ed3fc8ac0a65fbbcd0a86baebab4a87",
+            "batch_latency_s": 24.69
+          },
+          {
+            "hash": "c1c413c8b0bd6c9f0b19e14e9d2ac3f39ed3fc8ac0a65fbbcd0a86baebab4a87",
+            "batch_latency_s": 24.71
+          }
+        ],
+        "4": [
+          {
+            "hash": "6a874ef79fef79faa3f4545d42e82ec4e48a984aa4812be292279385b9bae744",
+            "batch_latency_s": 25.44
+          },
+          {
+            "hash": "6a874ef79fef79faa3f4545d42e82ec4e48a984aa4812be292279385b9bae744",
+            "batch_latency_s": 25.68
+          },
+          {
+            "hash": "6a874ef79fef79faa3f4545d42e82ec4e48a984aa4812be292279385b9bae744",
+            "batch_latency_s": 25.58
+          }
+        ],
+        "8": [
+          {
+            "hash": "e686c334a4dfbe6177182f41bfed351f1a9c11d3f2a5268bc3e5509eb2826335",
+            "batch_latency_s": 26.89
+          },
+          {
+            "hash": "e686c334a4dfbe6177182f41bfed351f1a9c11d3f2a5268bc3e5509eb2826335",
+            "batch_latency_s": 26.73
+          },
+          {
+            "hash": "c9927f2b9bc79c2a2e7d4b44290ca5e16127c03bd19c2d25ee91a5a81423ff98",
+            "batch_latency_s": 26.75
+          }
+        ],
+        "16": [
+          {
+            "hash": "ec239dce7a29e176df7a36bf2026bcb8042be6ace75e22944b939e687f317cf6",
+            "batch_latency_s": 29.22
+          },
+          {
+            "hash": "ec239dce7a29e176df7a36bf2026bcb8042be6ace75e22944b939e687f317cf6",
+            "batch_latency_s": 29.24
+          },
+          {
+            "hash": "ec239dce7a29e176df7a36bf2026bcb8042be6ace75e22944b939e687f317cf6",
+            "batch_latency_s": 29.21
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "6a7149d070c54c7c4a5d06b2e2dda3d53dff699277f0e8ed7dc016be3876c06b": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131400.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections that contain the required metrics.\n3. Extract the values for each metric, ensuring to use the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the values to the appropriate format (millions and percentages).\n5. Ensure the currency is correctly ide"
+        },
+        "c1c413c8b0bd6c9f0b19e14e9d2ac3f39ed3fc8ac0a65fbbcd0a86baebab4a87": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant metrics in the document and extract the transitional figures if both transitional and fully-loaded are shown.\n3. Convert the amounts to millions and ensure the correct currency is used.\n4. Format the extracted data into the required JSON structure.\n\n### Step 1: Identify the Most Recent R"
+        },
+        "6a874ef79fef79faa3f4545d42e82ec4e48a984aa4812be292279385b9bae744": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant metrics in the document and extract the transitional figures if both transitional and fully-loaded are shown.\n3. Convert the amounts to millions and ensure the correct currency is used.\n4. Format the extracted data into the required JSON structure.\n\n### Step 1: Identify the Most Recent R"
+        },
+        "e686c334a4dfbe6177182f41bfed351f1a9c11d3f2a5268bc3e5509eb2826335": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections that contain the required metrics.\n3. Extract the values for each metric, ensuring to use the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the values to the appropriate format (millions and percentages).\n5. Ensure the currency is correctly ide"
+        },
+        "c9927f2b9bc79c2a2e7d4b44290ca5e16127c03bd19c2d25ee91a5a81423ff98": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections that contain the required metrics.\n3. Extract the values for each metric, ensuring to use the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the values to the appropriate format (millions and percentages).\n5. Ensure the currency is correctly ide"
+        },
+        "ec239dce7a29e176df7a36bf2026bcb8042be6ace75e22944b939e687f317cf6": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections that contain the required metrics.\n3. Extract the values for each metric, ensuring to use the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the values to the appropriate format (millions, percentages, etc.).\n5. Ensure the currency is correctly "
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131400,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863900,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-06-22T17:57:06.575276"
+    },
+    "ON": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": true,
+      "mode": "ON",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "unique_target_outputs_across_sizes": 2,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "20993cb855d61947151e48477930f5044982c097a311714781f94a4643912b80",
+        "2": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+        "4": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+        "8": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+        "16": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "20993cb855d61947151e48477930f5044982c097a311714781f94a4643912b80",
+            "batch_latency_s": 68.54
+          },
+          {
+            "hash": "20993cb855d61947151e48477930f5044982c097a311714781f94a4643912b80",
+            "batch_latency_s": 66.7
+          },
+          {
+            "hash": "20993cb855d61947151e48477930f5044982c097a311714781f94a4643912b80",
+            "batch_latency_s": 66.69
+          }
+        ],
+        "2": [
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 66.77
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 66.77
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 66.77
+          }
+        ],
+        "4": [
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.09
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.1
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.09
+          }
+        ],
+        "8": [
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.33
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.31
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 67.31
+          }
+        ],
+        "16": [
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 70.98
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 71.02
+          },
+          {
+            "hash": "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5",
+            "batch_latency_s": 71.02
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "20993cb855d61947151e48477930f5044982c097a311714781f94a4643912b80": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections for each metric.\n3. Extract the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the amounts to millions and ensure the correct currency is used.\n5. Format the extracted data into the required JSON structure.\n\n### Step 1: Identify the Most Recent "
+        },
+        "fb799c8cf805421b23a08bd691da40beef162f38f1840ca4824ffd4dd142eae5": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131400.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": " To extract the required Basel III capital metrics from the provided regulatory disclosure document, I will follow these steps:\n\n1. Identify the most recent reporting date in the document.\n2. Locate the relevant sections for each metric.\n3. Extract the transitional figures if both transitional and fully-loaded are shown.\n4. Convert the amounts to millions and ensure the correct currency is used.\n5. Format the extracted data into the required JSON structure.\n\n### Step 1: Identify the Most Recent "
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131400,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863900,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-06-22T18:20:24.402201"
+    }
+  }
+}

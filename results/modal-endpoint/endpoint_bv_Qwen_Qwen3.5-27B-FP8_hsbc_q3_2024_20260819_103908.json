@@ -1,0 +1,127 @@
+{
+  "method": "client-side concurrent traffic against served endpoint (no batch pinning)",
+  "engine": "Modal Auto Endpoint (SGLang, tuned, speculative decoding)",
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "target_doc": "hsbc_q3_2024.pdf",
+  "concurrency": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "repeats": 3,
+  "max_tokens": 2560,
+  "temperature": 0.0,
+  "seed": 42,
+  "logprobs_check": {
+    "logprobs_supported": false,
+    "error": "{\"object\":\"error\",\"message\":\"DFLASH speculative decoding does not support return_logprob yet.\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}"
+  },
+  "margin_probe_via_endpoint": {},
+  "unique_target_outputs": 15,
+  "unique_final_channel_outputs": 5,
+  "per_size": {
+    "1": [
+      {
+        "hash": "ceb4374b86d2092021be556423c75869abb5f5f860f711a1fd01012ea78a65cf",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract 6 specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\nThe metrics are:\n1. CET1 Capital (Common Equity Tier 1) - abs"
+      },
+      {
+        "hash": "7122c72448fa6b46cfe2969863250a498f47c29e5707488565cb63e84491c6f6",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital (Common Equity Tier "
+      },
+      {
+        "hash": "5d8113cd023de68e19a3a53ec3fa923d865aa0a5e82a64b13d154be2e543782b",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      }
+    ],
+    "2": [
+      {
+        "hash": "87425d172dfae80ce06ce5402a4a62ca08c07189d781ebd9f92dae65bfa0534c",
+        "hash_final": "8983b1822646fd4d4a76654dbad6f1e500b68b8d839435c091c96b87695097f6",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\n    \"amount\": 131428,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\n    \"amount\": 863900,\n    \"currency\": \"USD\"\n  },\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      },
+      {
+        "hash": "54833e3d3ac6f709784defc1cf9c3eec70f1aeea9c047127136a38596a76a3f6",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount i"
+      },
+      {
+        "hash": "866f36d77904bd9b5958fc7f9d962be8d9ad5a41ca99c3018037bc431efcbd2b",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text.\nI need to find:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA ("
+      }
+    ],
+    "4": [
+      {
+        "hash": "abc921e87efe85d7087b9f4b7afe3e8cf8d15e13fa17969da0fb2db0b1d19a1b",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract 6 specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n1.  **CET1 Capital (Common Equity Tier 1)**: Absolute amount in mil"
+      },
+      {
+        "hash": "d62527406950a956b789d9d6610312a6515a177110118f471ebee8b72e274a6b",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      },
+      {
+        "hash": "1ada794540d6bea44083af72af85991a3b1c5af313ea842084bf6516e70d44ff",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      }
+    ],
+    "8": [
+      {
+        "hash": "ffdb19feecdd24ca1f2baea5107d189d01348c8b593cd42386b675ef41bfa076",
+        "hash_final": "38683dd07bb803ba5fe33e9298f74b9eefde7d40444ec8c1384671518a4308c4",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": ",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      },
+      {
+        "hash": "9a58e9e5a430848f0962be1f7e5f1371c59885ac04891035d7ab8edc2d42d2cd",
+        "hash_final": "ce464c47ee49688856fef9956b2be6ee3d65176f8bd27cac2273275baf2b729f",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\n    \"amount\": 131428,\n    \"currency\": \"USD\"\n  },\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\n    \"amount\": 863900,\n    \"currency\": \"USD\"\n  },\n  \"leverage_ratio\": 5",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      },
+      {
+        "hash": "afc18e8b9fab6b9ea7a83904fdec093841ab72e08aad07c64b77d16fe24eb4be",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      }
+    ],
+    "16": [
+      {
+        "hash": "6695f3d9296f2507ef6a303cf8dda6316de5fd59499138d4c82b2ee86ee5f3fb",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount i"
+      },
+      {
+        "hash": "e079f4e6a9839119c187b93728549dbd04a361c433f2c9fac66ff1487b983c80",
+        "hash_final": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text_head": "",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount i"
+      },
+      {
+        "hash": "6805895c44357b81b93a982fa0eafb439f73e44e8d38677f22304ea8fa109af0",
+        "hash_final": "f652fcc0b46f45f6e2019eefdf92aa0ec1a46bd67f6d225a77cd117fe9ae0a73",
+        "text_head": "\n\n{\n  \"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}",
+        "reasoning_head": "The user wants me to extract specific Basel III capital metrics from the provided text and output them in a specific JSON format.\n\n**Metrics to extract:**\n1.  **CET1 Capital**: Absolute amount in mill"
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T10:39:08.767379"
+}

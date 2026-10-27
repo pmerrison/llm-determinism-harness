@@ -1,0 +1,347 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Qwen3.5-27B",
+      "model_id": "Qwen/Qwen3.5-27B",
+      "arch": "gated-linear-attn",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 2560,
+      "json_only": false,
+      "unique_target_outputs_across_sizes": 5,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "84afcdb9684a7791dfafc42252849e6510e7896865f374bb20904d74332f6fa4",
+        "2": "9cd342ae85c6e71ebf01843da6751810fe1484ad2a1bdfe91f4b9860ca6c6ac1",
+        "4": "07c2425ce44c3d748c8e7f55e510d0d7e6a6673f12282e573ed05beebdb5b9c2",
+        "8": "6abc71477e99cb87270e86d69bb7cd2a285ab44ce824229180becd784f89940e",
+        "16": "9bf1cc3e9762c4dc5f3294b6460e5f5708db9a0c70732d22911ef9c3fc3091db"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "84afcdb9684a7791dfafc42252849e6510e7896865f374bb20904d74332f6fa4",
+            "batch_latency_s": 145.43
+          },
+          {
+            "hash": "84afcdb9684a7791dfafc42252849e6510e7896865f374bb20904d74332f6fa4",
+            "batch_latency_s": 137.31
+          },
+          {
+            "hash": "84afcdb9684a7791dfafc42252849e6510e7896865f374bb20904d74332f6fa4",
+            "batch_latency_s": 136.51
+          }
+        ],
+        "2": [
+          {
+            "hash": "9cd342ae85c6e71ebf01843da6751810fe1484ad2a1bdfe91f4b9860ca6c6ac1",
+            "batch_latency_s": 150.85
+          },
+          {
+            "hash": "9cd342ae85c6e71ebf01843da6751810fe1484ad2a1bdfe91f4b9860ca6c6ac1",
+            "batch_latency_s": 148.71
+          },
+          {
+            "hash": "9cd342ae85c6e71ebf01843da6751810fe1484ad2a1bdfe91f4b9860ca6c6ac1",
+            "batch_latency_s": 148.47
+          }
+        ],
+        "4": [
+          {
+            "hash": "07c2425ce44c3d748c8e7f55e510d0d7e6a6673f12282e573ed05beebdb5b9c2",
+            "batch_latency_s": 154.59
+          },
+          {
+            "hash": "07c2425ce44c3d748c8e7f55e510d0d7e6a6673f12282e573ed05beebdb5b9c2",
+            "batch_latency_s": 155.16
+          },
+          {
+            "hash": "07c2425ce44c3d748c8e7f55e510d0d7e6a6673f12282e573ed05beebdb5b9c2",
+            "batch_latency_s": 154.46
+          }
+        ],
+        "8": [
+          {
+            "hash": "6abc71477e99cb87270e86d69bb7cd2a285ab44ce824229180becd784f89940e",
+            "batch_latency_s": 164.14
+          },
+          {
+            "hash": "6abc71477e99cb87270e86d69bb7cd2a285ab44ce824229180becd784f89940e",
+            "batch_latency_s": 166.08
+          },
+          {
+            "hash": "6abc71477e99cb87270e86d69bb7cd2a285ab44ce824229180becd784f89940e",
+            "batch_latency_s": 156.88
+          }
+        ],
+        "16": [
+          {
+            "hash": "9bf1cc3e9762c4dc5f3294b6460e5f5708db9a0c70732d22911ef9c3fc3091db",
+            "batch_latency_s": 159.28
+          },
+          {
+            "hash": "9bf1cc3e9762c4dc5f3294b6460e5f5708db9a0c70732d22911ef9c3fc3091db",
+            "batch_latency_s": 158.56
+          },
+          {
+            "hash": "9bf1cc3e9762c4dc5f3294b6460e5f5708db9a0c70732d22911ef9c3fc3091db",
+            "batch_latency_s": 158.61
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "84afcdb9684a7791dfafc42252849e6510e7896865f374bb20904d74332f6fa4": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131428.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\n\n**Metrics to extract:**\n1.  **CET1 Capital (Common Equity Tier 1)** - absolute amount in millions.\n2.  **CET1 Ratio (%)** - percentage ratio.\n3.  **Total Capital Ratio (%)** - percentage ratio.\n4.  **Total RWA (Risk-Weighted Assets)** - absolute amount in millions.\n5.  **Leverage Ratio (%)** - also known as SLR.\n6.  **LCR (%)** - Liquidity Coverage Ra"
+        },
+        "9cd342ae85c6e71ebf01843da6751810fe1484ad2a1bdfe91f4b9860ca6c6ac1": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131428.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (latest reporting date) which is 30 September 2024 based on the document title \"Pillar 3 Disclosures at 30 September 2024\".\nI need to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nI need to check for transitional vs fully-loaded figures. The inst"
+        },
+        "07c2425ce44c3d748c8e7f55e510d0d7e6a6673f12282e573ed05beebdb5b9c2": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131428.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (latest reporting date) which is 30 September 2024 based on the document title \"Pillar 3 Disclosures at 30 September 2024\".\nI need to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nI need to check for transitional vs fully-loaded figures. The inst"
+        },
+        "6abc71477e99cb87270e86d69bb7cd2a285ab44ce824229180becd784f89940e": {
+          "parse_success": false,
+          "parsed": null,
+          "gt_comparison": null,
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided document.\nI need to find the most recent figures (30 September 2024) and use transitional figures if available.\nThe output must be valid JSON in a specific format.\n\nMetrics to extract:\n1. CET1 Capital (amount in millions)\n2. CET1 Ratio (%)\n3. Total Capital Ratio (%)\n4. Total RWA (amount in millions)\n5. Leverage Ratio (%)\n6. LCR (%)\n\nDocument Analysis:\n- The document is \"HSBC Holdings plc Pillar 3 Disclosu"
+        },
+        "9bf1cc3e9762c4dc5f3294b6460e5f5708db9a0c70732d22911ef9c3fc3091db": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131428.0,
+              "match": true
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "\n\n<think>\nThe user wants me to extract specific Basel III capital metrics from the provided regulatory disclosure document for HSBC Holdings plc.\nThe document is \"Pillar 3 Disclosures at 30 September 2024\".\n\nI need to extract the following 6 metrics:\n1. CET1 Capital (Common Equity Tier 1) - absolute amount in millions\n2. CET1 Ratio (%) - percentage ratio\n3. Total Capital Ratio (%) - percentage ratio\n4. Total RWA (Risk-Weighted Assets) - absolute amount in millions\n5. Leverage Ratio (%) - also kn"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T21:50:32.764803"
+    },
+    "ON": {
+      "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+    }
+  }
+}

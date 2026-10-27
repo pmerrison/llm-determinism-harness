@@ -1,0 +1,372 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": true,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "2": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "4": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "8": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "16": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.73
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 2.81
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 2.8
+          }
+        ],
+        "2": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.1
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.13
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.13
+          }
+        ],
+        "4": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.62
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.62
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 3.61
+          }
+        ],
+        "8": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 4.71
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 4.73
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 4.74
+          }
+        ],
+        "16": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 6.87
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 6.86
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 6.82
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131400.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": "{\"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"}, \"cet1_ratio\": 15.2, \"total_capital_ratio\": 20.8, \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"}, \"leverage_ratio\": 5.7, \"lcr\": 137}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131400,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863900,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T19:44:31.542671"
+    },
+    "ON": {
+      "model": "Qwen3-32B",
+      "model_id": "Qwen/Qwen3-32B",
+      "arch": "dense",
+      "batch_invariant": true,
+      "mode": "ON",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 1024,
+      "json_only": true,
+      "unique_target_outputs_across_sizes": 1,
+      "is_batch_invariant": true,
+      "size_to_hash": {
+        "1": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "2": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "4": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "8": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+        "16": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.64
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 6.54
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 6.54
+          }
+        ],
+        "2": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.07
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.07
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.07
+          }
+        ],
+        "4": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.58
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.58
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 7.6
+          }
+        ],
+        "8": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 8.99
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 8.98
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 8.98
+          }
+        ],
+        "16": [
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 11.57
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 11.56
+          },
+          {
+            "hash": "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801",
+            "batch_latency_s": 11.58
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "90f8e07dfd53a8bbaf33fc35c208c7e05b4b3d56e01fe0edb0444fb816b36801": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131428,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131428.0,
+              "gt": 131400.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863900.0,
+              "match": true
+            }
+          },
+          "text_head": "{\"cet1_capital\": {\"amount\": 131428, \"currency\": \"USD\"}, \"cet1_ratio\": 15.2, \"total_capital_ratio\": 20.8, \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"}, \"leverage_ratio\": 5.7, \"lcr\": 137}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131400,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863900,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-18T19:47:31.954259"
+    }
+  }
+}

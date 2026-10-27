@@ -1,0 +1,244 @@
+{
+  "auto": {
+    "OFF": {
+      "model": "gpt-oss-20b",
+      "model_id": "openai/gpt-oss-20b",
+      "arch": "MoE",
+      "batch_invariant": false,
+      "mode": "OFF",
+      "attn_backend_requested": "auto",
+      "attn_backend_actual": "auto(see-logs)",
+      "target_doc": "hsbc_q3_2024.pdf",
+      "filler_docs": [
+        "barclays_plc_fy_2024.pdf",
+        "barclays_q3_2024.pdf",
+        "goldman_sachs-2Q25.pdf",
+        "goldman_sachs-3Q25.pdf",
+        "hsbc_q4_2024.pdf",
+        "jpm_q1_2024.pdf",
+        "pnc_q3_2024.pdf",
+        "pnc_q4_2024.pdf",
+        "stanchart_fy_2024.pdf",
+        "stanchart_q3_2024.pdf"
+      ],
+      "batch_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "repeats": 3,
+      "target_char_cap": 18000,
+      "filler_char_cap": 9000,
+      "max_tokens": 2560,
+      "json_only": true,
+      "chat_template": true,
+      "reasoning_effort": "low",
+      "tensor_parallel_size": 1,
+      "unique_target_outputs_across_sizes": 2,
+      "is_batch_invariant": false,
+      "size_to_hash": {
+        "1": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+        "2": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+        "4": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+        "8": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+        "16": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521"
+      },
+      "per_size": {
+        "1": [
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 25.32
+          },
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 13.5
+          },
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 13.21
+          }
+        ],
+        "2": [
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 17.45
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 13.4
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 13.16
+          }
+        ],
+        "4": [
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 16.02
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 13.86
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 13.52
+          }
+        ],
+        "8": [
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 17.8
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 13.34
+          },
+          {
+            "hash": "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15",
+            "batch_latency_s": 14.22
+          }
+        ],
+        "16": [
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 19.96
+          },
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 15.6
+          },
+          {
+            "hash": "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521",
+            "batch_latency_s": 17.19
+          }
+        ]
+      },
+      "distinct_outputs": {
+        "cb75be13ab6a93a214e76798459ebb6a1ac0a957894caebe5410ecdcb77da521": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe have numbers: CET1 capital 131.4bn => 131400 million. Currency USD. CET1 ratio 15.2. Total capital ratio 20.8. RWA 863.9bn => 863900 million. Leverage ratio 5.7. LCR 137.assistantfinal{\n  \"cet1_capital\": {\"amount\": 131400, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}"
+        },
+        "dfeb50cae3a3c789d8912a1272a4e44cdea0c594fe8eedf1c13468071c530c15": {
+          "parse_success": true,
+          "parsed": {
+            "cet1_capital": {
+              "amount": 131400,
+              "currency": "USD"
+            },
+            "cet1_ratio": 15.2,
+            "total_capital_ratio": 20.8,
+            "rwa": {
+              "amount": 863900,
+              "currency": "USD"
+            },
+            "leverage_ratio": 5.7,
+            "lcr": 137
+          },
+          "gt_comparison": {
+            "cet1_ratio": {
+              "value": 15.2,
+              "gt": 15.2,
+              "match": true
+            },
+            "total_capital_ratio": {
+              "value": 20.8,
+              "gt": 20.8,
+              "match": true
+            },
+            "leverage_ratio": {
+              "value": 5.7,
+              "gt": 5.7,
+              "match": true
+            },
+            "lcr": {
+              "value": 137.0,
+              "gt": 137.0,
+              "match": true
+            },
+            "cet1_capital_amount": {
+              "value": 131400.0,
+              "gt": 131428.0,
+              "match": false
+            },
+            "rwa_amount": {
+              "value": 863900.0,
+              "gt": 863923.0,
+              "match": false
+            }
+          },
+          "text_head": "analysisWe have values: CET1 capital 131.4bn => 131400 million. Currency USD. CET1 ratio 15.2. Total capital ratio 20.8. RWA 863.9bn => 863900 million. Leverage ratio 5.7. LCR 137.assistantfinal{\n  \"cet1_capital\": {\"amount\": 131400, \"currency\": \"USD\"},\n  \"cet1_ratio\": 15.2,\n  \"total_capital_ratio\": 20.8,\n  \"rwa\": {\"amount\": 863900, \"currency\": \"USD\"},\n  \"leverage_ratio\": 5.7,\n  \"lcr\": 137\n}"
+        }
+      },
+      "ground_truth": {
+        "cet1_capital": {
+          "amount": 131428,
+          "currency": "USD"
+        },
+        "cet1_ratio": 15.2,
+        "total_capital_ratio": 20.8,
+        "rwa": {
+          "amount": 863923,
+          "currency": "USD"
+        },
+        "leverage_ratio": 5.7,
+        "lcr": 137
+      },
+      "infrastructure": "Modal H200 + vLLM 0.23.0",
+      "vllm_version": "0.23.0",
+      "timestamp": "2026-08-19T08:21:54.091517"
+    },
+    "ON": {
+      "error": "Engine core initialization failed. See root cause above. Failed core proc(s): {}"
+    }
+  }
+}
